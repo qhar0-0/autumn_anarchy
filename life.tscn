@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwyfps3dkq8fq"]
+
+[ext_resource type="Texture2D" uid="uid://0jwaixksff1d" path="res://Sprites/Untitled30_20250831215146.png" id="1_bkce2"]
+
+[node name="life" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_bkce2")

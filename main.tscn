@@ -1,0 +1,637 @@
+[gd_scene load_steps=26 format=3 uid="uid://c5fxrqjoi72xf"]
+
+[ext_resource type="Script" uid="uid://dtds0ybflr6l6" path="res://main.gd" id="1_efxa6"]
+[ext_resource type="Script" uid="uid://ri8feygg8a8s" path="res://start.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bwenhpxc0n7gm" path="res://Sprites/start_pressed.png" id="2_7mycd"]
+[ext_resource type="Texture2D" uid="uid://b5kj458lldclm" path="res://Sprites/start.png" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://5ugnkm7b3ktl" path="res://language.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b182jum08kukk" path="res://Sprites/start_pressed_j.png" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://dllad5jlbacrg" path="res://Sprites/start_j.png" id="5_5vw27"]
+[ext_resource type="Texture2D" uid="uid://c7op1tl82oc3v" path="res://Sprites/lang_pressed.png" id="7_4c57u"]
+[ext_resource type="Script" uid="uid://b2avy7t5nicgv" path="res://sprite_button_start.gd" id="7_dg77c"]
+[ext_resource type="Script" uid="uid://dm1o1h34mdtvo" path="res://animated_sprite_start.gd" id="7_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://bhh00rcd0e0el" path="res://Sprites/lang.png" id="8_efxa6"]
+[ext_resource type="Texture2D" uid="uid://5u6x3q6vsql1" path="res://Sprites/lang_pressed_j.png" id="9_dg77c"]
+[ext_resource type="Script" uid="uid://bme84a0lvpqvu" path="res://timer_button_start.gd" id="9_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bbrqx0ixsb1am" path="res://Sprites/lang_j.png" id="10_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://bojtjysv2f1pt" path="res://sfx_and_bgm/ui_correct_button2-103167.mp3" id="15_vivmo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lquwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": false,
+"name": &"button_start_pressed",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}],
+"loop": false,
+"name": &"button_start_pressed_j",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vw27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": true,
+"name": &"start_pressed",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_vivmo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSpriteStart:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"button_start_pressed"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSpriteStart:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_w48qg"]
+resource_name = "start_pressed"
+length = 2.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSpriteStart:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"button_start_pressed"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSpriteStart:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0992058, 0.2, 0.297617, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.09889, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_2cqfq"]
+resource_name = "start_pressed_j"
+length = 2.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSpriteStart:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"button_start_pressed_j"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSpriteStart:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yaehf"]
+_data = {
+&"RESET": SubResource("Animation_vivmo"),
+&"start_pressed": SubResource("Animation_w48qg"),
+&"start_pressed_j": SubResource("Animation_2cqfq")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_074og"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efxa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efxa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efxa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efxa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efxa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4c57u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efxa6")
+}],
+"loop": false,
+"name": &"lang_pressed",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ycdy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dg77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ycdy4")
+}],
+"loop": false,
+"name": &"lang_pressed_j",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_82xsv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSpriteLang:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lang_pressed"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSpriteLang:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_cegan"]
+resource_name = "lang_pressed"
+length = 2.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSpriteLang:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lang_pressed"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSpriteLang:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_getpj"]
+resource_name = "lang_pressed_j"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSpriteLang:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"lang_pressed_j"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSpriteLang:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryguw"]
+_data = {
+&"RESET": SubResource("Animation_82xsv"),
+&"lang_pressed": SubResource("Animation_cegan"),
+&"lang_pressed_j": SubResource("Animation_getpj")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_efxa6")
+
+[node name="Start" type="TextureButton" parent="."]
+offset_left = 374.0
+offset_top = 251.0
+offset_right = 743.0
+offset_bottom = 385.0
+script = ExtResource("1_ig7tw")
+
+[node name="AnimatedSpriteStart" type="AnimatedSprite2D" parent="Start"]
+position = Vector2(189, 69.5)
+scale = Vector2(1.11176, 1.06818)
+sprite_frames = SubResource("SpriteFrames_lquwl")
+animation = &"button_start_pressed"
+script = ExtResource("7_ycdy4")
+
+[node name="AnimationPlayerStart" type="AnimationPlayer" parent="Start"]
+libraries = {
+&"": SubResource("AnimationLibrary_yaehf")
+}
+
+[node name="SpriteButtonStart" type="Sprite2D" parent="Start"]
+visible = false
+position = Vector2(189, 71)
+texture = ExtResource("2_h2yge")
+script = ExtResource("7_dg77c")
+
+[node name="TimerButtonStart" type="Timer" parent="Start"]
+script = ExtResource("9_w48qg")
+
+[node name="Language" type="TextureButton" parent="."]
+offset_left = 475.0
+offset_top = 465.0
+offset_right = 625.0
+offset_bottom = 590.0
+script = ExtResource("3_1bvp3")
+
+[node name="AnimatedSpriteLang" type="AnimatedSprite2D" parent="Language"]
+position = Vector2(96, 64)
+sprite_frames = SubResource("SpriteFrames_074og")
+animation = &"lang_pressed"
+frame = 1
+
+[node name="AnimationPlayerLang" type="AnimationPlayer" parent="Language"]
+libraries = {
+&"": SubResource("AnimationLibrary_ryguw")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_vivmo")
+
+[connection signal="mouse_entered" from="Start" to="Start/AnimatedSpriteStart" method="_on_start_mouse_entered"]
+[connection signal="pressed" from="Start" to="Start/AnimatedSpriteStart" method="_on_start_pressed"]
+[connection signal="timeout" from="Start/TimerButtonStart" to="Start/AnimatedSpriteStart" method="_on_timer_button_start_timeout"]
+[connection signal="pressed" from="Language" to="Language" method="_on_pressed"]

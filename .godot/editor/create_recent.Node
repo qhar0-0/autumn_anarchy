@@ -1,0 +1,14 @@
+AudioStreamPlayer2D
+AudioListener2D
+AnimatedSprite2D
+Sprite2D
+TextureButton
+Timer
+Node2D
+CollisionShape2D
+Area2D
+CharacterBody2D
+StaticBody2D
+Camera2D
+AnimationPlayer
+Button

@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://s2qugnl77w7e"]
+
+[ext_resource type="Texture2D" uid="uid://n5jl2askdssx" path="res://Sprites/return.png" id="2_g2f1x"]
+[ext_resource type="Texture2D" uid="uid://bibhjxe12764n" path="res://Sprites/return_pressed.png" id="3_6bfpu"]
+[ext_resource type="Texture2D" uid="uid://bpape3h507rwj" path="res://Sprites/return_j.png" id="4_f6dkw"]
+[ext_resource type="Script" uid="uid://c7x7bv0grvfaw" path="res://animated_sprite_2d.gd" id="5_bbupi"]
+[ext_resource type="Texture2D" uid="uid://ba6mtrcdjcgmh" path="res://Sprites/return_pressed_j.png" id="5_w0oin"]
+[ext_resource type="AudioStream" uid="uid://bojtjysv2f1pt" path="res://sfx_and_bgm/ui_correct_button2-103167.mp3" id="6_g2f1x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2f1x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2f1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2f1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2f1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2f1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2f1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2f1x")
+}],
+"loop": false,
+"name": &"return_pressed",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_f6dkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0oin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6dkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0oin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6dkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0oin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6dkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0oin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6dkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0oin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6dkw")
+}],
+"loop": false,
+"name": &"return_pressed_j",
+"speed": 10.0
+}]
+
+[node name="return_button" type="Node2D"]
+
+[node name="ReturnButton" type="TextureButton" parent="."]
+offset_left = -99.0
+offset_top = -68.0
+offset_right = 95.0
+offset_bottom = 60.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ReturnButton"]
+position = Vector2(105, 65)
+sprite_frames = SubResource("SpriteFrames_g2f1x")
+animation = &"return_pressed"
+script = ExtResource("5_bbupi")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ReturnButton/AnimatedSprite2D"]
+stream = ExtResource("6_g2f1x")
+
+[connection signal="pressed" from="ReturnButton" to="ReturnButton/AnimatedSprite2D" method="_on_return_button_pressed"]

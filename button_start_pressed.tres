@@ -1,0 +1,11 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=3 uid="uid://csafruqeiup4e"]
+
+[ext_resource type="Texture2D" uid="uid://b5kj458lldclm" path="res://Sprites/start.png" id="1_sli40"]
+[ext_resource type="Texture2D" uid="uid://bwenhpxc0n7gm" path="res://Sprites/start_pressed.png" id="2_od1mf"]
+
+[resource]
+frames = 2
+frame_0/texture = ExtResource("1_sli40")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("2_od1mf")
+frame_1/duration = 0.1

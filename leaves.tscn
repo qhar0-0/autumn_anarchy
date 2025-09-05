@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxxqo677qusfs"]
+
+[ext_resource type="Script" uid="uid://ds4phllhggday" path="res://leaves.gd" id="1_fthp6"]
+[ext_resource type="Texture2D" uid="uid://86fpv1f02s7a" path="res://Sprites/Untitled23_20250831112542(1).png" id="1_jj7gx"]
+[ext_resource type="Texture2D" uid="uid://cbnf0ejuf7ap" path="res://Sprites/Untitled23_20250831112542.png" id="2_fthp6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yicbm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jj7gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fthp6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="leaves" type="Node2D"]
+script = ExtResource("1_fthp6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yicbm")
