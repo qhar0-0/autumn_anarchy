@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1757044511
-.gitignore.txt::TextFile::-1::1757044075::0::1::::<><><>0<>0<><>::
+::res://::1757045960
+.gitignore.txt::TextFile/TextFile::-1::1757044075::0::1::::<><><>0<>0<><>::
 animated_sprite_2d.gd::GDScript/GDScript::7068310923615669858::1756861390::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 animated_sprite_start.gd::GDScript/GDScript::8056098877133282332::1756861338::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 apple.gd::GDScript/GDScript::3313650889596804209::1756777596::0::1::::<>Node2D<><>0<>0<><>::
@@ -68,7 +68,7 @@ Untitled20_20250826204520.png::CompressedTexture2D/CompressedTexture2D::21631928
 Untitled20_20250826204534.png::CompressedTexture2D/CompressedTexture2D::2963799929749143478::1756270524::1756270524::1::::<><><>0<>0<>33832cfbc4c121b4b05ab695749b31d9<>res://.godot/imported/Untitled20_20250826204534.png-44321c9a39333718a93a54669be8b82e.ctex::
 Untitled20_20250826204622.png::CompressedTexture2D/CompressedTexture2D::6425647012055640017::1756270524::1756270524::1::::<><><>0<>0<>c8f031b51360556660ac3c12470a609d<>res://.godot/imported/Untitled20_20250826204622.png-35904ea4a5c781a29a50c20fd4098bab.ctex::
 ::res://autumn_anarchy/::1757042400
-README.md::TextFile::-1::1757042358::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1757042358::0::1::::<><><>0<>0<><>::
 ::res://Global/::1757044323
 Game.gd::GDScript/GDScript::776185465270606715::1756783686::0::1::::<>Node<><>0<>0<><>::
 ::res://images/::1757044322
@@ -79,7 +79,13 @@ icon.jpg::CompressedTexture2D/CompressedTexture2D::3122668444336440389::17557426
 bgm_test.mp3::AudioStreamMP3/AudioStreamMP3::2279030996840897040::1756860076::1756860896::1::::<><><>0<>0<>c77e4afe375d6477de0b9f0ca906a338<>res://.godot/imported/bgm_test.mp3-c8d608b852f4ab6c9bb715c9bb9e3679.mp3str::
 cartoon-slide-whistle-down-1-176647.mp3::AudioStreamMP3/AudioStreamMP3::4731596257172732195::1756860792::1756860850::1::::<><><>0<>0<>4509a678b06cf9ff88ad494a2be9097a<>res://.godot/imported/cartoon-slide-whistle-down-1-176647.mp3-300c1c28918cb9fbae705ffd64879445.mp3str::
 ui_correct_button2-103167.mp3::AudioStreamMP3/AudioStreamMP3::3388814878777134321::1756861242::1756861242::1::::<><><>0<>0<>d8ed66ca2f6f94a76fb030d04b63aa34<>res://.godot/imported/ui_correct_button2-103167.mp3-af13907059bd3a2d9f1cfe4c7e74ada8.mp3str::
-::res://Sprites/::1757044323
+::res://Sprites/::1757045960
+enemy.png::CompressedTexture2D/CompressedTexture2D::6588202690062732134::1757045908::1757045923::1::::<><><>0<>0<>9ba64326c9c86ce3a074e9ac2e136330<>res://.godot/imported/enemy.png-41fe8dc360e641bde1ffa5e18678b763.ctex::
+enemy_flower.png::CompressedTexture2D/CompressedTexture2D::3780582843976196170::1757045908::1757045929::1::::<><><>0<>0<>75669da46dcf3c869add75318d4ef319<>res://.godot/imported/enemy_flower.png-213d1302716edbe3ef6df587ee1defab.ctex::
+enemy_wings1.png::CompressedTexture2D/CompressedTexture2D::2546322391639726225::1757045908::1757045938::1::::<><><>0<>0<>c7218e755cdf1ff453f895658b5b56a6<>res://.godot/imported/enemy_wings1.png-33719f2355d23473fbd18143fb0af18e.ctex::
+enemy_wings2.png::CompressedTexture2D/CompressedTexture2D::4350204000720437305::1757045908::1757045947::1::::<><><>0<>0<>5a1ea5d9747224762dd9734366d60449<>res://.godot/imported/enemy_wings2.png-08ea34ab3cd9345bea128b83ff52638f.ctex::
+enemy_wings3.png::CompressedTexture2D/CompressedTexture2D::3625470340003751076::1757045908::1757045953::1::::<><><>0<>0<>601e6c1ad19cce8894aaf17985c56099<>res://.godot/imported/enemy_wings3.png-cde639613f3e4c687336c22f121736de.ctex::
+enemy_wings4.png::CompressedTexture2D::4960038124811359028::1757045908::1757045960::1::::<><><>0<>0<>7637a0159d18befb046138c02015cf31<>res://.godot/imported/enemy_wings4.png-09f7b68333af12735390921182ccfad8.ctex::
 lang.png::CompressedTexture2D/CompressedTexture2D::2893756699260992391::1756271320::1756358342::1::::<><><>0<>0<>b5d160cbe98993a7f50a283fe51d5cc8<>res://.godot/imported/lang.png-b5964a43cd2a527ef3dee6f6fe989355.ctex::
 lang_j.png::CompressedTexture2D/CompressedTexture2D::2492717820805552764::1756271320::1756348934::1::::<><><>0<>0<>56f2d8fb60b339d0b79294c669c3a953<>res://.godot/imported/lang_j.png-81271a384e62b02a21c2fe23d7174e99.ctex::
 lang_pressed.png::CompressedTexture2D/CompressedTexture2D::7048743854365604437::1756271320::1756358348::1::::<><><>0<>0<>22ee3cb68719600f0b556ad697804b93<>res://.godot/imported/lang_pressed.png-217a6f0c7c50638f9ef4db61b85905d3.ctex::

@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://ibx172e2nqig"]
+
+[ext_resource type="Script" uid="uid://c2e8ocs4vcp0n" path="res://enemy.gd" id="1_wujgv"]
+[ext_resource type="Texture2D" uid="uid://bcjps71rniy86" path="res://Sprites/enemy_wings1.png" id="2_hb8ge"]
+[ext_resource type="Texture2D" uid="uid://b28jhvkvxy602" path="res://Sprites/enemy_wings2.png" id="3_e1ltt"]
+[ext_resource type="Texture2D" uid="uid://brwg74vtx4365" path="res://Sprites/enemy_wings3.png" id="4_dxifv"]
+[ext_resource type="Texture2D" uid="uid://ccwxdrl7ar11q" path="res://Sprites/enemy_wings4.png" id="5_pwjut"]
+[ext_resource type="Texture2D" uid="uid://c04m0asgnr40i" path="res://Sprites/enemy.png" id="6_n0g06"]
+[ext_resource type="Texture2D" uid="uid://bt4lwabh7ufo1" path="res://Sprites/enemy_flower.png" id="7_ar8e5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_doop2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hb8ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e1ltt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e1ltt")
+}],
+"loop": true,
+"name": &"enemy_wings_flap",
+"speed": 10.0
+}]
+
+[node name="enemy" type="Node2D"]
+script = ExtResource("1_wujgv")
+
+[node name="enemy_wings" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, -73)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_doop2")
+animation = &"enemy_wings_flap"
+frame = 5
+frame_progress = 0.250431
+
+[node name="enemy_body" type="Sprite2D" parent="."]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("6_n0g06")
+
+[node name="enemy_flower" type="Sprite2D" parent="."]
+position = Vector2(0, -58)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_ar8e5")
+offset = Vector2(0.5, 0.8)
+
+[node name="hurter_spawn_delay" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="hurter_spawn_delay" to="." method="_on_hurter_spawn_delay_timeout"]
