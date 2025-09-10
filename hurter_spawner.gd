@@ -1,6 +1,6 @@
 extends Node2D
-@onready var apple = preload("res://apple.tscn")
-@onready var spawnable = true
+#@onready var apple = preload("res://apple.tscn")
+#@onready var spawnable = true
 
 #func _ready() -> void:
 	#var start_apple = apple.instantiate()

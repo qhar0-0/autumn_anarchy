@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://u7v5bl005qdk"]
+[gd_scene load_steps=55 format=3 uid="uid://u7v5bl005qdk"]
 
 [ext_resource type="Script" uid="uid://ggt5cmvo1x0e" path="res://camera_2d.gd" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://bjnbepp44uj62" path="res://world.gd" id="1_mc2jv"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dxgorspc7ikad" path="res://Sprites/Untitled30_20250831133928.png" id="10_ikiii"]
 [ext_resource type="Texture2D" uid="uid://di5wwh7hoxkw0" path="res://Sprites/Untitled30_20250831133657.png" id="11_k3n1d"]
 [ext_resource type="Script" uid="uid://4k40e7fkqo3h" path="res://text_level.gd" id="12_2o6r5"]
+[ext_resource type="Texture2D" uid="uid://de7mtkyx888q1" path="res://Sprites/Untitled32_20250905222123.png" id="12_g1i3r"]
 [ext_resource type="Texture2D" uid="uid://b6k0g5754q0qa" path="res://Sprites/Untitled30_20250831133919.png" id="13_wukud"]
 [ext_resource type="Texture2D" uid="uid://bbqgwfmdk8d1s" path="res://Sprites/Untitled30_20250831133712.png" id="14_il2jm"]
 [ext_resource type="Texture2D" uid="uid://djqwf7lxivj" path="res://Sprites/Untitled30_20250831133718.png" id="15_wjb0r"]
@@ -34,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://de1v1g16rdy21" path="res://Sprites/Untitled30_20250901153623.png" id="32_gggvi"]
 [ext_resource type="Texture2D" uid="uid://bmppm2g3cqrca" path="res://Sprites/Untitled30_20250901190305.png" id="32_w44yn"]
 [ext_resource type="Script" uid="uid://bc5vptw6stlwv" path="res://text_score.gd" id="33_w44yn"]
-[ext_resource type="AudioStream" uid="uid://7p8kpr3vlgl1" path="res://sfx_and_bgm/bgm_test.mp3" id="35_6ah6f"]
+[ext_resource type="AudioStream" uid="uid://dhglve2s4fhcp" path="res://sfx_and_bgm/bgm_test.mp3" id="35_6ah6f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cbp6q"]
 animations = [{
@@ -576,9 +577,14 @@ shape = SubResource("CircleShape2D_bc84e")
 wait_time = 0.05
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="bullets" type="Node2D" parent="Player"]
+
+[node name="sprite_border" type="Sprite2D" parent="."]
 z_index = 5
 texture = ExtResource("10_ikiii")
+
+[node name="sprite_border_glow" type="Sprite2D" parent="sprite_border"]
+texture = ExtResource("12_g1i3r")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

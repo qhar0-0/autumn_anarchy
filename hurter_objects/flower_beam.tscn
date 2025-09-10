@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsjtpj1ntmuey"]
+
+[ext_resource type="Script" uid="uid://dhrts8jucyiyo" path="res://flower_beam.gd" id="1_bcj8m"]
+[ext_resource type="Texture2D" uid="uid://dmfk4abnok4wu" path="res://Sprites/flower_beam.png" id="2_gucb6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcj8m"]
+size = Vector2(12, 41)
+
+[node name="flower_beam" type="Node2D"]
+script = ExtResource("1_bcj8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gucb6")
+offset = Vector2(0, 21)
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 20.5)
+shape = SubResource("RectangleShape2D_bcj8m")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

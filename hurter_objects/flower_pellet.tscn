@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs7w4xb0k7udx"]
+
+[ext_resource type="Script" uid="uid://bykie03ldemfj" path="res://flower_pellet.gd" id="1_pkeop"]
+[ext_resource type="Texture2D" uid="uid://cuilu8bnwcmdj" path="res://Sprites/flower_pellet.png" id="2_6sg7y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tsb1g"]
+radius = 2.0
+height = 5.0
+
+[node name="flower_pellet" type="Node2D"]
+script = ExtResource("1_pkeop")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6sg7y")
+offset = Vector2(-0.5, 0.5)
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 0.05)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_tsb1g")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

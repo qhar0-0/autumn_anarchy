@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ibx172e2nqig"]
+[gd_scene load_steps=11 format=3 uid="uid://ibx172e2nqig"]
 
 [ext_resource type="Script" uid="uid://c2e8ocs4vcp0n" path="res://enemy.gd" id="1_wujgv"]
 [ext_resource type="Texture2D" uid="uid://bcjps71rniy86" path="res://Sprites/enemy_wings1.png" id="2_hb8ge"]
@@ -34,29 +34,46 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wujgv"]
+size = Vector2(28, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb8ge"]
+size = Vector2(17, 115)
+
 [node name="enemy" type="Node2D"]
 script = ExtResource("1_wujgv")
 
 [node name="enemy_wings" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, -73)
-scale = Vector2(1.5, 1.5)
+position = Vector2(9, -100)
+scale = Vector2(1.85, 1.85)
 sprite_frames = SubResource("SpriteFrames_doop2")
 animation = &"enemy_wings_flap"
 frame = 5
 frame_progress = 0.250431
 
 [node name="enemy_body" type="Sprite2D" parent="."]
-scale = Vector2(1.6, 1.6)
+scale = Vector2(2, 2)
 texture = ExtResource("6_n0g06")
 
 [node name="enemy_flower" type="Sprite2D" parent="."]
-position = Vector2(0, -58)
-scale = Vector2(1.5, 1.5)
+position = Vector2(0, -75)
+scale = Vector2(2, 2)
 texture = ExtResource("7_ar8e5")
 offset = Vector2(0.5, 0.8)
 
 [node name="hurter_spawn_delay" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.35
 autostart = true
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-2, 16)
+shape = SubResource("RectangleShape2D_wujgv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-4.5, -3.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_hb8ge")
 
 [connection signal="timeout" from="hurter_spawn_delay" to="." method="_on_hurter_spawn_delay_timeout"]

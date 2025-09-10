@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5gpnhifncqvt"]
+
+[ext_resource type="Script" uid="uid://dyttpcvmp88nu" path="res://bullet_leaf.gd" id="1_tjfhh"]
+[ext_resource type="Texture2D" uid="uid://86fpv1f02s7a" path="res://Sprites/Untitled23_20250831112542(1).png" id="2_d776w"]
+[ext_resource type="Texture2D" uid="uid://cbnf0ejuf7ap" path="res://Sprites/Untitled23_20250831112542.png" id="3_fgayu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fsqdw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d776w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fgayu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0yuw"]
+height = 38.0
+
+[node name="bullet_leaf" type="Node2D"]
+script = ExtResource("1_tjfhh")
+
+[node name="sprite_leaf" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.188, 0.75)
+sprite_frames = SubResource("SpriteFrames_fsqdw")
+offset = Vector2(8, 0)
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CapsuleShape2D_p0yuw")
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
